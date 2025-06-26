@@ -1,0 +1,36 @@
+we just ran 
+forge init 
+
+which gives me intial project directories kinda like a skeleton.. a boilerplate
+
+typing anvil in the terminal spins up a local chain which can be added to metamask via the rpc url.
+we can deploy our contracts on whi anvil chain for testing.
+
+we deploy a smart contract in anvil chain using the command 
+forge build or forge compile
+
+now we are learning to write scripts in foundry to default execute to deploy the smart contracts that we build
+
+we run the deploy scripts using the command
+also in importing the file, vsc shows error, but it compiles fine with foundry
+forge script script/DeploySimpleStorage.s.sol
+
+this will deploy the contract to temporary anvil chain. that is why it provides the contract address
+
+to deploy to anvil chain, start the chain and set the rpc url in forge script command to deploy there
+
+issue with using .env is that we have allot of private info there kepy in plane text
+so we encrpy the private keys in ERC-255 json based
+
+So now we interact with contract using CLI using cast send which sends commands
+we ran the contract using the command
+
+cast send 0x5b73C5498c1E3b4dbA84de0F1833c4a029d90519 "store(uint256)" 123 --rpc-url $RPC_URL --private-key $PRIVATE_KEY
+where store is the functin name and 123 is the arguement going in the function
+
+
+now for not sending and instead reciveinng the value, we write
+cast call 0x5b73C5498c1E3b4dbA84de0F1833c4a029d90519 "retrieve()"
+
+forge fmt command will automatically format the complete code
+
