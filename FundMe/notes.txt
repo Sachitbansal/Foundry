@@ -6,3 +6,12 @@ so we need to tell foundry that "@chainlink/contracts" points to chainlink-brown
 
 foundry.toml is kinda like the package.json of the foundry
 it contains version and remappings and stuff
+
+
+
+we do forge test to run tests of smart contract
+
+so now what is happening is that AggregatorV3Interface has contract address of sepolia but when we run here, foudnry will spin up anvil chain and try to find the contract address on that anvil chain
+
+So there are workarounds for using addresses outside our systems
+so we can send fork url of --forke-url and put in Sepolia RPC URL to run test on this chain
