@@ -1,0 +1,8 @@
+we need to create somthing called a remapping to tell foundry that
+import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
+
+this is pointing to some local file in out project and not github since this convtrion is of remix and not foundry
+so we need to tell foundry that "@chainlink/contracts" points to chainlink-brownie-contracts/contracts and our work there is done
+
+foundry.toml is kinda like the package.json of the foundry
+it contains version and remappings and stuff
