@@ -15,3 +15,11 @@ so now what is happening is that AggregatorV3Interface has contract address of s
 
 So there are workarounds for using addresses outside our systems
 so we can send fork url of --forke-url and put in Sepolia RPC URL to run test on this chain
+
+forge coverage gives us how much of the contract is tested
+
+private variables are more gass efficient
+
+prank will set the message sender according to us for the next call
+
+deal will give fake money to user created for prank for testing purposes
